@@ -123,6 +123,9 @@ app.put("/api/delete_product", (req, res) => {
 app.get("/api/get_image", (req, res) => {
     res.status(200).send({
         "status": "200",
-        "image": "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
+        "image": "https://img.freepik.com/premium-photo/painting-white-cat-with-green-eyes_900775-44373.jpg"
     });
 });
+
+
+
