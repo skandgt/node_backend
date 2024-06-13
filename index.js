@@ -89,7 +89,7 @@ app.put("/api/update_product", (req, res) => {
 
 
 app.put("/api/delete_product", (req, res) => {
-    console.log("i am inside delete");
+    console.log("i am inside delete now");
     const productIdToRemove = req.body.id;
     console.log(productIdToRemove);
     if(productData.length > 0){
