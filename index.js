@@ -123,6 +123,6 @@ app.put("/api/delete_product", (req, res) => {
 app.get("/api/get_image", (req, res) => {
     res.status(200).send({
         "status": "200",
-        "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fflowers%2F&psig=AOvVaw3BIgfp58MTJ7K0Qqin_dOd&ust=1718379439842000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNDLvbX02IYDFQAAAAAdAAAAABAE"
+        "image": "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
     });
 });
