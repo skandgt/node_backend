@@ -10,6 +10,16 @@ extended: true
 
 const PORT = 2000;
 let productData = [];
+const allowedUsers = [{
+"id": "skand",
+"pass": "gupta"
+},
+{
+    "id": "admin",
+    "pass": "admin@1"
+    },
+];
+
 
 app.listen(PORT, () =>{
     console.log("Connected to server at "+ PORT)
@@ -126,4 +136,25 @@ app.get("/api/get_image", (req, res) => {
         "status": "200",
         "image": "https://img.freepik.com/premium-photo/painting-white-cat-with-green-eyes_900775-44373.jpg"
     });
+});
+
+let c = 0
+app.post("/api/login", (req,res) => {
+    for(let i = 0; i < allowedUsers.length; i++) {
+        if(req.body.id == allowedUsers[i]["id"] && req.body.pass == allowedUsers[i]["pass"]){
+            res.status(200).send({
+                "status": "success",
+                "message": allowedUsers[i]["id"] + " successfully logged in!"
+            });
+            c = 1
+            break;
+        }
+    }
+
+    if(c == 0){
+        res.status(200).send({
+            "status": "failed",
+            "message": "Incorrect Id pass or user does not exists."
+        });
+    }
 });
