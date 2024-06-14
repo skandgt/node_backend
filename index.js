@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const mongoose = require("mongoose")
 
 app.use(express.json());
 
@@ -126,6 +127,3 @@ app.get("/api/get_image", (req, res) => {
         "image": "https://img.freepik.com/premium-photo/painting-white-cat-with-green-eyes_900775-44373.jpg"
     });
 });
-
-
-
