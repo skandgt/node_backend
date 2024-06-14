@@ -140,6 +140,7 @@ app.get("/api/get_image", (req, res) => {
 
 let c = 0
 app.post("/api/login", (req,res) => {
+    c = 0
     for(let i = 0; i < allowedUsers.length; i++) {
         if(req.body.id == allowedUsers[i]["id"] && req.body.pass == allowedUsers[i]["pass"]){
             res.status(200).send({
